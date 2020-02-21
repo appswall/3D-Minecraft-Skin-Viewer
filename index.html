@@ -1016,6 +1016,7 @@ body {
 		if (!e) e = window.event;
 		var keyCode = e.keyCode || e.which;
 		if (keyCode == '13'){
+			// Enter pressed, set new image
 			var uid = await getJSON('https://cors-anywhere.herokuapp.com/https://api.mojang.com/users/profiles/minecraft/' + document.getElementById('username').value).then(function(response){return response.id});
 			img.src = 'https://crafatar.com/skins/' + uid;
 		}
